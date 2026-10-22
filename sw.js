@@ -1,5 +1,5 @@
 /* يحفظ واجهة التطبيق على الجهاز (الشاشة الأولى والأيقونات) — البرنامج نفسه بيتحمّل من جوجل */
-var CACHE = 'stock-shell-v2';
+var CACHE = 'stock-shell-v3';
 var FILES = ['./', 'index.html', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/maskable-512.png', 'icons/apple-touch-icon.png', 'icons/favicon-32.png'];
 self.addEventListener('install', function (e) { e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(FILES); }).then(function () { return self.skipWaiting(); })); });
 self.addEventListener('activate', function (e) {
